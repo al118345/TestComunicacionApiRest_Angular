@@ -1,5 +1,11 @@
-# TestComunicacionApi
+# Test de Comunicación con Api Rest 
 
+Este proyecto consiste en realizar una comunicación con una API REST para obtener información utilizando HttpClient de Angular. 
+
+Para más información visita https://1938.com.es/usar-api-angular y para ejecutar la API REST de ejemplo descarga el proyecto https://github.com/al118345/envio_email_api_python
+
+
+# Información de Angular. 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
 ## Development server

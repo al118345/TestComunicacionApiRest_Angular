@@ -1,0 +1,25 @@
+<section class="bg-light pt-5 text-secondary">
+  <h1 class="display-4 fw-bold mb-3 text-center text-dark">Saludo Servidor</h1>
+
+
+  <div class="container">
+    <div class="align-items-center row">
+      <div class="col-lg-6 mb-5">
+        <p class="fw-light lead mb-4">Test1</p><button [disabled]="cargando" (click)="saludo()" class="btn btn-primary">Saludo del servidor</button>
+      </div>
+      <div class="col-lg-6">
+      </div>
+    </div>
+  </div>
+
+
+  <ng-container *ngIf="printado">
+    <div class="alert-info">
+      <p>{{this.resultado}}</p>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="cargando">
+    <mat-spinner  mode="indeterminate" ></mat-spinner>
+  </ng-container>
+
+</section>
