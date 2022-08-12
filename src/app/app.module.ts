@@ -8,13 +8,15 @@ import { Vista2Component } from './components/vista2/vista2.component';
 import { MenuComponent } from './components/menu/menu.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Vista1Component,
     Vista2Component,
-    MenuComponent
+    MenuComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
