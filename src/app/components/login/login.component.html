@@ -9,6 +9,6 @@
     <mat-label>Password</mat-label>
     <input matInput placeholder="Enter your password" value="" name="password" type="password" [(ngModel)]= "password">
   </mat-form-field>
-  <button mat-raised-button color="primary" (click)="submit()">Enviar</button>
-  <span *ngIf="show"> <button mat-button color="accent">Login correcto.</button></span>
+  <button mat-raised-button color="primary" (click)="login()">Enviar</button>
+  <span *ngIf="show"> <p>Login correcto. El  token es <strong> {{this.token}}</strong> </p></span>
 </form>

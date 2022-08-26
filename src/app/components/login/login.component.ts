@@ -8,24 +8,40 @@ import {ConsultarapiserviceService} from "../../service/consultarapiservice.serv
 })
 export class LoginComponent implements OnInit {
   public  token = '';
+  model: any = {};
+  loading = false;
+  error = '';
+  username = '';
+  password = '';
+  show = false;
+
 
   constructor(public api: ConsultarapiserviceService) { }
   ngOnInit(): void {
       this.token = '';
   }
 
-  login(usuario: string, contrasena: string) {
-    const auxiliar = this.api.login(usuario, contrasena)
+
+
+  login() {
+    const auxiliar = this.api.login(this.username, this.password)
+    this.show = false;
+    this.loading = true;
     auxiliar.subscribe({
       complete: () => {
+        this.loading = false;
       },
       error: () => {
         console.log('error en el servicio, dejamos entrar')
       },
       next: (resultado) => {
         this.token = resultado.token;
+        if (this.token !== '' ) {
+          this.show = true;
+        }
       }
     });
+
   }
 
 }

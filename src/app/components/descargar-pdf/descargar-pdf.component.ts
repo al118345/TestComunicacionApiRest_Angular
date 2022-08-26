@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import {ConsultarapiserviceService} from "../../service/consultarapiservice.service";
 
 @Component({
-  selector: 'app-vista1',
-  templateUrl: './vista1.component.html',
-  styleUrls: ['./vista1.component.css']
+  selector: 'app-descargar-pdf',
+  templateUrl: './descargar-pdf.component.html',
+  styleUrls: ['./descargar-pdf.component.css']
 })
-export class Vista1Component implements OnInit {
+export class DescargarPDFComponent implements OnInit {
+
   cargando = false;
   resultado = '';
   printado = false;
@@ -41,4 +42,5 @@ export class Vista1Component implements OnInit {
       }
     });
   }
+
 }

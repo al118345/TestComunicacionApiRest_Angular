@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Vista2Component } from './vista2.component';
+import { DescargarPDFComponent } from './descargar-pdf.component';
 
-describe('Vista2Component', () => {
-  let component: Vista2Component;
-  let fixture: ComponentFixture<Vista2Component>;
+describe('DescargarPDFComponent', () => {
+  let component: DescargarPDFComponent;
+  let fixture: ComponentFixture<DescargarPDFComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Vista2Component ]
+      declarations: [ DescargarPDFComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Vista2Component);
+    fixture = TestBed.createComponent(DescargarPDFComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {Vista2Component} from "./components/vista2/vista2.component";
-import {Vista1Component} from "./components/vista1/vista1.component";
+import {DescargarPDFComponent} from "./components/descargar-pdf/descargar-pdf.component";
+import {SaludarServidorComponent} from "./components/saludar-servidor/saludar-servidor.component";
+import {LoginComponent} from "./components/login/login.component";
 
 
 const routes: Routes = [
-  { path: 'descarga-pdf', component: Vista2Component },
-  { path: '**',  component: Vista1Component }
+  { path: 'descarga-pdf', component: DescargarPDFComponent },
+  { path: 'saludo-servidor', component: SaludarServidorComponent },
+  { path: 'ejemplo-login', component: LoginComponent },
+  { path: '**',  component: SaludarServidorComponent }
 ];
 
 
