@@ -1,14 +1,33 @@
-<h5><u><i>Login Form using Angular material!!</i></u></h5>
-<form class="example-form">
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>User Name</mat-label>
-    <input matInput placeholder="Enter your name" name="usename"
-           [(ngModel)] ="username">
-  </mat-form-field>
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Password</mat-label>
-    <input matInput placeholder="Enter your password" value="" name="password" type="password" [(ngModel)]= "password">
-  </mat-form-field>
-  <button mat-raised-button color="primary" (click)="login()">Enviar</button>
-  <span *ngIf="show"> <p>Login correcto. El  token es <strong> {{this.token}}</strong> </p></span>
-</form>
+<h5><u><i>Login Usando Angular material</i></u></h5>
+<p></p>
+<p></p>
+<div class="row">
+
+  <form class="example-form">
+    <div class="col-md-4">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>User -> Subasta</mat-label>
+        <input matInput placeholder="Subasta" name="usename"
+               [(ngModel)] ="username">
+      </mat-form-field>
+    </div>
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-4">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Password -> Sub123Ruben</mat-label>
+        <input matInput placeholder="Sub123Ruben" name="password" type="password" [(ngModel)]= "password">
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" (click)="login()">Enviar</button>
+    <span *ngIf="show"> <p>Login correcto. El  token es <strong> {{this.token}}</strong> </p></span>
+    <span *ngIf="error"> <div class="alert alert-danger" role="alert">Fallo en el login. </div></span>
+  </form>
+  <div class="row">
+    <div class="col-md-10">
+      Explicación completa en la web: <a href="https://1938.com.es/usar-api-angular" >https://1938.com.es/usar-api-angular</a>
+    </div>
+  </div>
+
+
+</div>

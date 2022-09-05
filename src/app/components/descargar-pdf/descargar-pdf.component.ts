@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ConsultarapiserviceService} from "../../service/consultarapiservice.service";
+import {ConsultarapiService} from "../../service/consultarapi.service";
 
 @Component({
   selector: 'app-descargar-pdf',
@@ -12,7 +12,7 @@ export class DescargarPDFComponent implements OnInit {
   resultado = '';
   printado = false;
 
-  constructor(public api: ConsultarapiserviceService) { }
+  constructor(public api: ConsultarapiService) { }
 
   ngOnInit(): void {
   }

@@ -1,1 +1,31 @@
-<p>saludar-servidor works!</p>
+
+
+<div class="row">
+  <div class="col-md-10">
+    Saludos, al cargar esta ventana hemos creado una comunicación con la api, en este momento esta:
+  </div>
+
+</div>
+<p></p>
+<div class="row">
+  <div class="col-md-5">
+    <button type="submit" [disabled]="cargando" class="btn btn-primary"
+            (click)="get_saludo()">Obtener Saludo</button>
+    <ng-container *ngIf="printado">
+      <div class="alert-info">
+        <p>{{this.resultado}}</p>
+        <pre>{{this.object_json | json}}</pre>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="cargando">
+      <mat-spinner  mode="indeterminate" ></mat-spinner>
+    </ng-container>
+  </div>
+
+</div>
+<p></p>
+<div class="row">
+  <div class="col-md-10">
+    Explicación completa en la web: <a href="https://1938.com.es/usar-api-angular" >https://1938.com.es/usar-api-angular</a>
+  </div>
+</div>

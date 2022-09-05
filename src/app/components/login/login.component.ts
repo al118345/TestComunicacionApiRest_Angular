@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ConsultarapiserviceService} from "../../service/consultarapiservice.service";
+import {ConsultarapiService} from "../../service/consultarapi.service";
 
 @Component({
   selector: 'app-login',
@@ -8,15 +8,14 @@ import {ConsultarapiserviceService} from "../../service/consultarapiservice.serv
 })
 export class LoginComponent implements OnInit {
   public  token = '';
-  model: any = {};
   loading = false;
-  error = '';
+  error = false;
   username = '';
   password = '';
   show = false;
 
 
-  constructor(public api: ConsultarapiserviceService) { }
+  constructor(public api: ConsultarapiService) { }
   ngOnInit(): void {
       this.token = '';
   }
@@ -27,17 +26,22 @@ export class LoginComponent implements OnInit {
     const auxiliar = this.api.login(this.username, this.password)
     this.show = false;
     this.loading = true;
+    this.error = false;
     auxiliar.subscribe({
       complete: () => {
         this.loading = false;
       },
       error: () => {
+        this.error = true;
         console.log('error en el servicio, dejamos entrar')
       },
       next: (resultado) => {
         this.token = resultado.token;
-        if (this.token !== '' ) {
+        if (this.token  !== null ) {
           this.show = true;
+        }
+        else{
+          this.error = true;
         }
       }
     });
