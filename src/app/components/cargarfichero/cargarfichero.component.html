@@ -1,0 +1,35 @@
+<h5><u><i>EJemplo cargar fichero</i></u></h5>
+<p></p>
+<p></p>
+<div class="row">
+
+  <form [formGroup]="myForm" (ngSubmit)="enviar_fichero()">
+    <p></p>
+    <div class="form-group">
+      <label for="file">Fichero a enviar</label>
+      <p></p>
+      <p></p>
+      <input formControlName="file" id="file" type="file" class="form-control" (change)="onFileChange($event)">
+      <p></p>
+      <p></p>
+      <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+        <div *ngIf="f.file.errors?.required">Es necesario un fichero.</div>
+      </div>
+      <p></p>
+    </div>
+    <p></p>
+
+    <div *ngIf="error" class="form-group has-error">
+      <p>{{this.texto_errocr}}</p>
+    </div>
+
+    <button class="btn btn-primary"  [disabled]="desactivar ||  robot " type="submit">Enviar Documento. </button>
+    <div *ngIf="this.correcto then   mostrarinfo"></div>
+    <ng-template #mostrarinfo>
+      <div class="alert alert-success">
+        <p>{{this.texto_correcto}}</p>
+      </div>
+    </ng-template >
+    </form>
+
+</div>

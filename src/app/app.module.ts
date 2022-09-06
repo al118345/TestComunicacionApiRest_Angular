@@ -7,12 +7,13 @@ import { MenuComponent } from './components/menu/menu.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { SaludarServidorComponent } from './components/saludar-servidor/saludar-servidor.component';
 import { DescargarPDFComponent } from './components/descargar-pdf/descargar-pdf.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
+import { CargarficheroComponent } from './components/cargarfichero/cargarfichero.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {MatButtonModule} from "@angular/material/button";
     MenuComponent,
     LoginComponent,
     SaludarServidorComponent,
-    DescargarPDFComponent
+    DescargarPDFComponent,
+    CargarficheroComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import {MatButtonModule} from "@angular/material/button";
     BrowserAnimationsModule,
     FormsModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

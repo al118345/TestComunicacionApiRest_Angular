@@ -3,6 +3,8 @@ import { Observable, throwError} from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {catchError} from "rxjs/operators";
 import {User} from "../modelos/User";
+import {FormGroup} from "@angular/forms";
+import {JsonObject} from "@angular/compiler-cli/ngcc/src/packages/entry_point";
 
 @Injectable({
   providedIn: 'root'
@@ -71,4 +73,24 @@ export class ConsultarapiService {
           })
         );
     }
+
+  /*
+  Función para enviar un fichero a la api
+  params: formData:  el formulario con el fichero
+  return: Observable<any>
+   */
+  enviar_documento(formData:any): Observable<any> {
+    const headers = new HttpHeaders().set('Accept', 'application/pdf');
+    return this.http.post<any>(`http://0.0.0.0:5000/api/v1/ejemplo_envio_fichero/`, formData, {
+      headers,
+      responseType: 'blob' as 'json'
+    }).pipe(
+      catchError((err) => {
+
+        console.log('error caught in service')
+        console.error(err);
+        return throwError(err);
+      })
+    );
+  }
 }
