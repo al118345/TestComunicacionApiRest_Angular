@@ -17,7 +17,7 @@ export class DescargarPDFComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  saludo() {
+  descarga_fichero() {
     const auxiliar = this.api.saludo()
     auxiliar.subscribe({
       complete: () => {

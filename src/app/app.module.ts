@@ -14,6 +14,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import { CargarficheroComponent } from './components/cargarfichero/cargarfichero.component';
+import { ObtenerJsonComponent } from './components/obtener-json/obtener-json.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CargarficheroComponent } from './components/cargarfichero/cargarfichero
     LoginComponent,
     SaludarServidorComponent,
     DescargarPDFComponent,
-    CargarficheroComponent
+    CargarficheroComponent,
+    ObtenerJsonComponent
   ],
   imports: [
     BrowserModule,

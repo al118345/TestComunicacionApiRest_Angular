@@ -4,6 +4,7 @@ import {DescargarPDFComponent} from "./components/descargar-pdf/descargar-pdf.co
 import {SaludarServidorComponent} from "./components/saludar-servidor/saludar-servidor.component";
 import {LoginComponent} from "./components/login/login.component";
 import {CargarficheroComponent} from "./components/cargarfichero/cargarfichero.component";
+import {ObtenerJsonComponent} from "./components/obtener-json/obtener-json.component";
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'saludo-servidor', component: SaludarServidorComponent },
   { path: 'ejemplo-login', component: LoginComponent },
   { path: 'ejemplo-envio-fichero', component: CargarficheroComponent },
+  { path: 'ejemplo-obtener-json', component: ObtenerJsonComponent },
 
   { path: '**',  component: SaludarServidorComponent }
 ];

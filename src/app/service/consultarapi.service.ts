@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, throwError} from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {catchError} from "rxjs/operators";
+import {catchError, map} from "rxjs/operators";
 import {User} from "../modelos/User";
-import {FormGroup} from "@angular/forms";
-import {JsonObject} from "@angular/compiler-cli/ngcc/src/packages/entry_point";
 
 @Injectable({
   providedIn: 'root'
@@ -92,5 +90,29 @@ export class ConsultarapiService {
         return throwError(err);
       })
     );
+  }
+
+
+  /*
+  Función para obtener un JSON con los datos de una Api rest
+  return: Observable<any>
+   */
+  ejemploPeticionPost(): Observable<any> {
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+      })
+    };
+    return this.http
+      .post<any>(`http://0.0.0.0:5000/api/v1/ejemplo_json/`, httpOptions)
+      .pipe(
+        map((response) => response.datos),
+        catchError((err) => {
+          console.log('error caught in service')
+          console.error(err);
+          return throwError(err);
+        })
+      );
   }
 }
