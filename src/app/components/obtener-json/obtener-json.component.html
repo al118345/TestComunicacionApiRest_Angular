@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-10">
+    Ejemplo de obtención de un documento JSON desde una API REST
+  </div>
+
+</div>
+<p></p>
+<div class="row">
+  <div class="col-md-5">
+    <button type="submit" [disabled]="cargando" class="btn btn-primary"
+            (click)="obtener_json()">Obtener JSON</button>
+    <ng-container *ngIf="printado">
+      <div class="alert-info">
+        <p>{{this.resultado}}</p>
+        <pre>{{this.object_json | json}}</pre>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="cargando">
+      <mat-spinner  mode="indeterminate" ></mat-spinner>
+    </ng-container>
+  </div>
+</div>
