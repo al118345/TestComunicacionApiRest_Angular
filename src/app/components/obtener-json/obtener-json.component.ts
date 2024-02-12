@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {JsonObject} from "@angular/compiler-cli/ngcc/src/packages/entry_point";
+import { JsonObject } from '@angular-devkit/core';
 import {ConsultarapiService} from "../../service/consultarapi.service";
 
 @Component({

@@ -49,7 +49,12 @@ export class CargarficheroComponent implements OnInit {
 
   enviar_fichero (){
     const formData = new FormData();
-    formData.append('file', this.myForm.get('fileSource')?.value);
+    const fileSourceValue = this.myForm.get('fileSource')?.value;
+    if (fileSourceValue) {
+      formData.append('file', fileSourceValue);
+    } else {
+      console.log('fileSource value is null or undefined');
+    }
 
 
     const auxiliar = this.api.enviar_documento(formData)

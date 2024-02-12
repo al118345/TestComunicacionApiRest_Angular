@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ConsultarapiService} from "../../service/consultarapi.service";
-import {JsonObject} from "@angular/compiler-cli/ngcc/src/packages/entry_point";
-
+import { JsonObject } from '@angular-devkit/core';
 @Component({
   selector: 'app-saludar-servidor',
   templateUrl: './saludar-servidor.component.html',

@@ -74,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "TestComunicacionApi:build:production"
+              "buildTarget": "TestComunicacionApi:build:production"
             },
             "development": {
-              "browserTarget": "TestComunicacionApi:build:development"
+              "buildTarget": "TestComunicacionApi:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "TestComunicacionApi:build"
+            "buildTarget": "TestComunicacionApi:build"
           }
         },
         "test": {
@@ -108,6 +108,5 @@
         }
       }
     }
-  },
-  "defaultProject": "TestComunicacionApi"
+  }
 }
